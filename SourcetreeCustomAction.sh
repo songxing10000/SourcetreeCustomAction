@@ -13,6 +13,8 @@ if [ -n "$IDE" ]; then
     # 如果Example目录存在且_Pods.xcodeproj文件存在，则打开Example目录下的xcworkspace文件，否则打开当前目录下的xcworkspace文件
         if [ -d "Example" ] && [ -e "_Pods.xcodeproj" ]; then
           open Example/*.xcworkspace
+        elif [ -d "Example" ]; then
+          open Example/*.xcworkspace
         else
            open ./*.xcworkspace
         fi
@@ -21,6 +23,8 @@ if [ -n "$IDE" ]; then
     # 如果Example目录存在且_Pods.xcodeproj文件存在，则打开Example目录下的xcodeproj文件，否则打开当前目录下的xcodeproj文件
       if [ -d "Example" ] && [ -e "_Pods.xcodeproj" ]; then
           open Example/*.xcodeproj
+      elif [ -d "Example" ]; then
+          open Example/*.xcworkspace
       else
           open ./*.xcodeproj
       fi
