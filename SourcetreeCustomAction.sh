@@ -40,9 +40,11 @@ if [ -n "$IDE" ]; then
     androidstudio)
     # 如果参数个数大于等于3且第三个参数不等于$FILE，则使用Android Studio打开第三个参数指定的文件，否则只打开第一个参数指定的目录
       if [ $# -ge 3 ] && [ "$3" != '$FILE' ]; then
-        /usr/local/bin/studio $1 $3
+        # /usr/local/bin/studio $1 $3
+        studio $1 $3
       else
-        /usr/local/bin/studio $1
+        # /usr/local/bin/
+        studio $1
       fi
       ;;
     *)
